@@ -1,0 +1,151 @@
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: black;
+    font-family: Calibri, sans-serif;
+}
+
+#background-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.c1 {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.8;
+    cursor: pointer;
+    transform: scale(0);
+    transition: transform 0.1s ease-in-out;
+}
+
+.c2 { background-color: #2ecc71; width: 275px; height: 275px; } /* Green */
+.c4 { background-color: #3498db; width: 250px; height: 250px; } /* Blue */
+.c8 { background-color: #9b59b6; width: 225px; height: 225px; } /* Purple */
+.c16 { background-color: #f1c40f; width: 200px; height: 200px; } /* Yellow */
+.c32 { background-color: #e67e22; width: 175px; height: 175px; } /* Orange */
+.c64 { background-color: #e74c3c; width: 150px; height: 150px; } /* Red */
+
+.score-ui {
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    color: white;
+    z-index: 100;
+    pointer-events: none;
+}
+
+#score {
+    font-size: 4em;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 10px;
+    background-color: #555;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 5px;
+    transition: width 0.2s ease-in-out;
+}
+
+#level {
+    font-size: 2em;
+    opacity: 0.7;
+    margin-top: 5px;
+}
+
+#cps-counter, #sps-counter {
+    font-size: 1.5em;
+    opacity: 0.7;
+    margin-top: 5px;
+}
+
+.score-popup {
+    position: absolute;
+    color: #fff;
+    font-size: 2em;
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 0.05s ease-out, opacity 0.2s ease-out, top 0.25s ease-out;
+    pointer-events: none;
+    z-index: 50;
+}
+
+.auto-button {
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    cursor: pointer;
+    z-index: 101;
+    pointer-events: auto;
+    background-color: white;
+    border-radius: 50%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: background-color 0.2s;
+    overflow: hidden; /* Important for containing the overlay */
+}
+
+.auto-button:hover {
+    background-color: #f0f0f0;
+}
+
+.auto-button:active {
+    background-color: #e0e0e0;
+}
+
+.auto-button img {
+    width: 40px;
+    height: 40px;
+    z-index: 2; /* Ensure icon is above overlay */
+}
+
+.auto-button-overlay-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.auto-button-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%);
+}
+
+.auto-button-overlay.duration {
+    background-color: rgba(144, 238, 144, 0.7); /* lightgreen with 0.7 opacity */
+    transform-origin: 50% 100%; /* Rotate from bottom center */
+    transform: rotate(0deg);
+}
+
+.auto-button-overlay.refill {
+    background-color: rgba(128, 128, 128, 0.5); /* gray with 0.5 opacity */
+    transform-origin: 50% 0%; /* Rotate from top center */
+    transform: rotate(0deg);
+}
+
+

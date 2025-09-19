@@ -1,0 +1,230 @@
+<div class="menu-tab-overlay">
+    <div class="menu-tab">
+        <div class="close-button">
+            <img src="res/img/close.svg" alt="Close">
+        </div>
+        <div class="menu-body">
+            <!-- Settings Section -->
+            <div class="menu-section settings-section">
+                <h2 class="section-label">Settings</h2>
+                <div class="settings-content">
+                    <div class="bg-changer">
+                        <div class="nav-color-type">
+                            <button class="nav-btn active" data-tab="preset">Preset/HEX</button>
+                            <button class="nav-btn" data-tab="rgb">RGB</button>
+                            <button class="nav-btn" data-tab="hsl">HSL</button>
+                            <button class="nav-btn" data-tab="image">Image</button>
+                        </div>
+                        <div class="color-adjust">
+                            <div class="color-adjust-content" id="preset-content">
+                                <div class="preset-grid">
+                                    <div class="preset-color active" style="background-color: #000000;" data-color="#000000">
+                                        <img src="res/img/menu_confirm.svg" class="confirm-icon">
+                                    </div>
+                                    <div class="preset-color" style="background-color: #1a1a1a;" data-color="#1a1a1a">
+                                        <img src="res/img/menu_confirm.svg" class="confirm-icon">
+                                    </div>
+                                    <div class="preset-color" style="background-color: #333333;" data-color="#333333">
+                                        <img src="res/img/menu_confirm.svg" class="confirm-icon">
+                                    </div>
+                                    <div class="preset-color" style="background-color: #4f4f4f;" data-color="#4f4f4f">
+                                        <img src="res/img/menu_confirm.svg" class="confirm-icon">
+                                    </div>
+                                    <div class="preset-color" style="background-color: #2c3e50;" data-color="#2c3e50">
+                                        <img src="res/img/menu_confirm.svg" class="confirm-icon">
+                                    </div>
+                                    <div class="preset-color" style="background-color: #34495e;" data-color="#34495e">
+                                        <img src="res/img/menu_confirm.svg" class="confirm-icon">
+                                    </div>
+                                    <div class="preset-color" style="background-color: #7f8c8d;" data-color="#7f8c8d">
+                                        <img src="res/img/menu_confirm.svg" class="confirm-icon">
+                                    </div>
+                                    <div class="preset-color" style="background-color: #95a5a6;" data-color="#95a5a6">
+                                        <img src="res/img/menu_confirm.svg" class="confirm-icon">
+                                    </div>
+                                </div>
+                                <div class="hex-input-container">
+                                    <input type="text" class="hex-input" placeholder="Enter HEX code..." maxlength="7">
+                                    <button class="hex-confirm-btn">
+                                        <img src="res/img/menu_confirm.svg" alt="Confirm">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="color-adjust-content" id="rgb-content" style="display: none;">
+                                <div class="rgb-hsl-editor">
+                                    <!-- Red Slider -->
+                                    <div class="slider-row">
+                                        <label for="rgb-r">R</label>
+                                        <input type="range" id="rgb-r" class="color-slider" min="0" max="255" value="0">
+                                        <input type="number" id="rgb-r-input" class="color-input" min="0" max="255" value="0">
+                                    </div>
+                                    <!-- Green Slider -->
+                                    <div class="slider-row">
+                                        <label for="rgb-g">G</label>
+                                        <input type="range" id="rgb-g" class="color-slider" min="0" max="255" value="0">
+                                        <input type="number" id="rgb-g-input" class="color-input" min="0" max="255" value="0">
+                                    </div>
+                                    <!-- Blue Slider -->
+                                    <div class="slider-row">
+                                        <label for="rgb-b">B</label>
+                                        <input type="range" id="rgb-b" class="color-slider" min="0" max="255" value="0">
+                                        <input type="number" id="rgb-b-input" class="color-input" min="0" max="255" value="0">
+                                    </div>
+                                </div>
+                                <div class="color-confirm-container">
+                                    <div class="color-preview" id="rgb-preview"></div>
+                                    <button class="color-confirm-btn" id="rgb-confirm-btn">
+                                        <img src="res/img/menu_confirm.svg" alt="Confirm">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="color-adjust-content" id="hsl-content" style="display: none;">
+                                <div class="rgb-hsl-editor">
+                                    <!-- Hue Slider -->
+                                    <div class="slider-row">
+                                        <label for="hsl-h">H</label>
+                                        <input type="range" id="hsl-h" class="color-slider" min="0" max="360" value="0">
+                                        <input type="number" id="hsl-h-input" class="color-input" min="0" max="360" value="0">
+                                    </div>
+                                    <!-- Saturation Slider -->
+                                    <div class="slider-row">
+                                        <label for="hsl-s">S</label>
+                                        <input type="range" id="hsl-s" class="color-slider" min="0" max="100" value="0">
+                                        <input type="number" id="hsl-s-input" class="color-input" min="0" max="100" value="0">
+                                    </div>
+                                    <!-- Lightness Slider -->
+                                    <div class="slider-row">
+                                        <label for="hsl-l">L</label>
+                                        <input type="range" id="hsl-l" class="color-slider" min="0" max="100" value="50">
+                                        <input type="number" id="hsl-l-input" class="color-input" min="0" max="100" value="50">
+                                    </div>
+                                </div>
+                                <div class="color-confirm-container">
+                                    <div class="color-preview" id="hsl-preview"></div>
+                                    <button class="color-confirm-btn" id="hsl-confirm-btn">
+                                        <img src="res/img/menu_confirm.svg" alt="Confirm">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="color-adjust-content" id="image-content" style="display: none;">
+                                <div class="image-upload-container">
+                                    <input type="file" id="bg-image-input" accept="image/*" hidden>
+                                    <img src="res/img/menu_upload.svg" alt="Upload Icon">
+                                    <p>Drag & Drop image file</p>
+                                    <span>or</span>
+                                    <button type="button" class="browse-btn">Browse File</button>
+                                </div>
+                                <div class="opacity-slider-container">
+                                    <label for="bg-brightness-slider">Brightness</label>
+                                    <input type="range" id="bg-brightness-slider" min="0.1" max="1" step="0.05" value="1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="setting-btns">
+                        <div class="menu-sound">
+                            <img src="res/img/menu_sound_on.svg" alt="Sound">
+                        </div>
+                        <div class="menu-reset">
+                            <img src="res/img/menu_reset.svg" alt="Reset">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics Section -->
+            <div class="menu-section statistics-section">
+                <h2 class="section-label">Statistics</h2>
+                <div class="statistics-content">
+                    <div class="stats-grid-left">
+                        <div class="stat-name-container">
+                            <p>Name: <span id="stat-name">Guest</span></p>
+                            <img src="res/img/menu_name_edit.svg" alt="Edit Name" id="edit-name-btn" class="edit-name-icon">
+                        </div>
+                        <p>Total score: <span id="stat-total-score">99 999 999</span></p>
+                        <p>Playtime: <span id="stat-playtime">1h 23m 45s</span></p>
+                        <p>Total playtime: <span id="stat-total-playtime">2h 34m 56s</span></p>
+                        <p>Highest manual CPS: <span id="stat-highest-cps">10.00 c/s</span></p>
+                        <p>Highest SPS: <span id="stat-highest-sps">99 999 pts/s</span></p>
+                        <p>Highest single Auto session Score: <span id="stat-highest-auto-score">999 999 pts</span></p>
+                    </div>
+                    <div class="stats-grid-right">
+                        <p>Total Circle clicked: <span id="stat-total-clicks">999 999</span></p>
+                        <ul>
+                            <li class="stat-c1">White: <span id="stat-c1-clicks">99 999</span></li>
+                            <li class="stat-c2">Green: <span id="stat-c2-clicks">99 999</span></li>
+                            <li class="stat-c4">Blue: <span id="stat-c4-clicks">99 999</span></li>
+                            <li class="stat-c8">Purple: <span id="stat-c8-clicks">99 999</span></li>
+                            <li class="stat-c16">Yellow: <span id="stat-c16-clicks">99 999</span></li>
+                            <li class="stat-c32">Orange: <span id="stat-c32-clicks">99 999</span></li>
+                            <li class="stat-c64">Red: <span id="stat-c64-clicks">99 999</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements Section -->
+            <div class="menu-section achievements-section">
+                <h2 class="section-label">Achievements</h2>
+                <div class="achievements-grid">
+                    <!-- Example 1: Achieved -->
+                    <div class="achievement-item achieved">
+                        <div class="achievement-header">
+                            <span class="achievement-title">First Click</span>
+                            <span class="achievement-status">Completed</span>
+                        </div>
+                        <div class="achievement-desc">Click your first circle.</div>
+                    </div>
+                    <!-- Example 2: Pending -->
+                    <div class="achievement-item pending">
+                        <div class="achievement-header">
+                            <span class="achievement-title">Novice Clicker</span>
+                            <span class="achievement-status">10/100</span>
+                        </div>
+                        <div class="achievement-desc">Click 100 circles.</div>
+                    </div>
+                    <!-- Example 3: Hidden -->
+                    <div class="achievement-item hidden">
+                        <div class="achievement-header">
+                            <span class="achievement-title">??????</span>
+                            <span class="achievement-status">Hidden</span>
+                        </div>
+                        <div class="achievement-desc">??????</div>
+                    </div>
+                    <!-- Example 4: Achieved -->
+                    <div class="achievement-item achieved">
+                        <div class="achievement-header">
+                            <span class="achievement-title">Level Up!</span>
+                            <span class="achievement-status">Completed</span>
+                        </div>
+                        <div class="achievement-desc">Reach level 2.</div>
+                    </div>
+                    <!-- Example 5: Pending -->
+                    <div class="achievement-item pending">
+                        <div class="achievement-header">
+                            <span class="achievement-title">Millionaire</span>
+                             <span class="achievement-status">123,456/1,000,000</span>
+                        </div>
+                        <div class="achievement-desc">Earn 1,000,000 points.</div>
+                    </div>
+                    <!-- Example 6: Hidden -->
+                    <div class="achievement-item hidden">
+                        <div class="achievement-header">
+                            <span class="achievement-title">??????</span>
+                            <span class="achievement-status">Hidden</span>
+                        </div>
+                        <div class="achievement-desc">??????</div>
+                    </div>
+                     <!-- Example 7: Hidden -->
+                    <div class="achievement-item hidden">
+                        <div class="achievement-header">
+                            <span class="achievement-title">??????</span>
+                            <span class="achievement-status">Hidden</span>
+                        </div>
+                        <div class="achievement-desc">??????</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

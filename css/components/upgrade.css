@@ -1,0 +1,269 @@
+.upgrade-button {
+    position: fixed;
+    bottom: 5%;
+    left: 2%;
+    cursor: pointer;
+    z-index: 101;
+    pointer-events: auto;
+    background-color: white;
+    border-radius: 50%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: background-color 0.2s;
+}
+
+.upgrade-button:hover {
+    background-color: #f0f0f0;
+}
+
+.upgrade-button:active {
+    background-color: #e0e0e0;
+}
+
+.upgrade-button img {
+    width: 40px;
+    height: 40px;
+}
+
+.upgrade-tab-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex; /* Use flexbox for centering */
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.upgrade-tab-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.upgrade-tab {
+    position: relative;
+    width: 30%;
+    height: 70%;
+    background-color: #222;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    color: white;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.upgrade-tab-overlay.visible .upgrade-tab {
+    transform: scale(1);
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: -60px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: background-color 0.2s;
+}
+
+.close-button:hover {
+    background-color: #f0f0f0;
+}
+
+.close-button:active {
+    background-color: #e0e0e0;
+}
+
+.close-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.upgrade-body {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.upgrade-body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.upgrade-section {
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.section-label {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.upgrade-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: rgba(0,0,0,0.15);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.upgrade-icon {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.5);
+}
+
+.upgrade-icon.auto-icon img {
+    height: 60%;
+    width: 60%;
+    filter: invert(1);
+}
+
+/* Colors for icons */
+.c1-icon { background-color: #e0e0e0; }
+.c2-icon { background-color: #2ecc71; }
+.c4-icon { background-color: #3498db; }
+.c8-icon { background-color: #9b59b6; }
+.c16-icon { background-color: #f1c40f; }
+.c32-icon { background-color: #e67e22; }
+.c64-icon { background-color: #e74c3c; }
+
+.upgrade-icon .c-num {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke: 1.5px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.upgrade-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.detail-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex-grow: 1;
+}
+
+.detail-label {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.progress-counter {
+    display: flex;
+    gap: 4px;
+    height: 12px;
+}
+
+.progress-part {
+    flex-grow: 1;
+    border-radius: 3px;
+    position: relative;
+}
+
+.progress-part.active {
+    background-color: #4caf50;
+}
+
+.progress-part.inactive {
+    background-color: rgba(0,0,0,0.3);
+    border: 1px solid rgba(0,0,0,0.5);
+}
+
+.progress-bubble {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.progress-bubble::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.progress-part:hover .progress-bubble {
+    visibility: visible;
+    opacity: 1;
+}
+
+.upgrade-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f1c40f;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    flex-shrink: 0;
+}
+
+.upgrade-btn:hover {
+    background-color: #f39c12;
+}
+
+.upgrade-btn:active {
+    transform: scale(0.95);
+}

@@ -1,0 +1,151 @@
+{
+    "Welcome": {
+        "tier": "1",
+        "title": "Welcome to Click the Circle!",
+        "description": "Click the first Circle"
+    },
+    "upgrade_table": {
+        "tier": "1",
+        "title": "Upgrade Table",
+        "description": "Upgrade any Circle/Bot gear for the first time"
+    },
+    "relaxing": {
+        "tier": "1",
+        "title": "Relaxing",
+        "description": "Use BotClicker for the first time"
+    },
+    "nice_start": {
+        "tier": "1",
+        "title": "Nice Start",
+        "description": "Reach Level 2"
+    },
+    "interesting": {
+        "tier": "4",
+        "title": "Interesting",
+        "description": "Reach Level 5"
+    },
+    "addicted": {
+        "tier": "16",
+        "title": "Addicted",
+        "description": "Reach Level 10"
+    },
+    "million_power": {
+        "tier": "32",
+        "title": "Million Power!",
+        "description": "Reach Level 16"
+    },
+    "ascension_to_heaven": {
+        "tier": "64",
+        "title": "Ascension to Heaven",
+        "description": "Reach Level 19"
+    },
+    "world_end": {
+        "tier": "128",
+        "title": "World End",
+        "description": "Reach Level 20"
+    },
+    "green_age": {
+        "tier": "2",
+        "title": "Green Age",
+        "description": "Click the Green Circle"
+    },
+    "blue_age": {
+        "tier": "4",
+        "title": "Blue Age",
+        "description": "Click the Blue Circle"
+    },
+    "purple_age": {
+        "tier": "8",
+        "title": "Purple Age",
+        "description": "Click the Purple Circle"
+    },
+    "yellow_age": {
+        "tier": "16",
+        "title": "Yellow Age",
+        "description": "Click the Yellow Circle"
+    },
+    "orange_age": {
+        "tier": "32",
+        "title": "Orange Age",
+        "description": "Click the Orange Circle"
+    },
+    "red_age": {
+        "tier": "64",
+        "title": "Red Age",
+        "description": "Click the Red Circle"
+    },
+    "common": {
+        "tier": "16",
+        "title": "Common",
+        "description": "Max upgrade White Circle"
+    },
+    "uncommon": {
+        "tier": "16",
+        "title": "Uncommon",
+        "description": "Max upgrade Green Circle"
+    },
+    "rare": {
+        "tier": "32",
+        "title": "Rare",
+        "description": "Max upgrade Blue Circle"
+    },
+    "epic": {
+        "tier": "32",
+        "title": "Epic",
+        "description": "Max upgrade Purple Circle"
+    },
+    "legendary": {
+        "tier": "64",
+        "title": "Legendary",
+        "description": "Max upgrade Yellow Circle"
+    },
+    "mythical": {
+        "tier": "64",
+        "title": "Mythical",
+        "description": "Max upgrade Orange Circle"
+    },
+    "SSR": {
+        "tier": "128",
+        "title": "SSR",
+        "description": "Max upgrade Red Circle"
+    },
+    "CircleGPT": {
+        "tier": "128",
+        "title": "CircleGPT",
+        "description": "Max upgrade BotClicker"
+    },
+    "i_like_circles": {
+        "tier": "8",
+        "title": "I like circles",
+        "description": "Single Play time reach 15 minutes"
+    },
+    "i_love_circles": {
+        "tier": "32",
+        "title": "I love circles!",
+        "description": "Single Play time reach 60 minutes"
+    },
+    "circle_dream": {
+        "tier": "128",
+        "title": "Circle Dream",
+        "description": "Total Play time reach 360 minutes"
+    },
+    "pink_circle": {
+        "title": "Pink Circle?",
+        "tier": "128",
+        "description": "Achieve 10 clicks/s while clicking manually",
+        "hidden": true
+    },
+    "unlimited_red_work": {
+        "tier": "64",
+        "title": "Unlimited Red Work",
+        "description": "Achieve 20 Red Cirle coexist on screen",
+        "hidden": true
+    },
+    "thank_you_for_playing": {
+        "tier": "128",
+        "title": "Thank you for playing!",
+        "description": "Complete all achievements",
+        "hidden": true
+    }
+
+}

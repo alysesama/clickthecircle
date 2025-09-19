@@ -1,0 +1,62 @@
+{
+    "name": "Guest",
+    "setting-color": "black",
+    "setting-sound": true,
+    "singleScore": 0,
+    "totalScore": 0,
+    "nextAutoTime": 0,
+    "statistics": {
+        "playtime": 0,
+        "totalPlayTime": 0,
+        "totalClicks": {
+            "c1": 0,
+            "c2": 0,
+            "c4": 0,
+            "c8": 0,
+            "c16": 0,
+            "c32": 0,
+            "c64": 0
+        },
+        "highestManualClicksPerSecond": 0,
+        "highestScorePerSecond": 0,
+        "highestSingleAutoScore": 0
+    },
+    "upgradeLevel": {
+        "auto_click": {
+            "clickspeed": 0,
+            "duration": 0,
+            "refilltime": 0
+        },
+        "circle": {
+            "c1": {
+                "critical_chance": 0,
+                "score": 0
+            },
+            "c2": {
+                "critical_chance": 0,
+                "score": 0
+            },
+            "c4": {
+                "critical_chance": 0,
+                "score": 0
+            },
+            "c8": {
+                "critical_chance": 0,
+                "score": 0
+            },
+            "c16": {
+                "critical_chance": 0,
+                "score": 0
+            },
+            "c32": {
+                "critical_chance": 0,
+                "score": 0
+            },
+            "c64": {
+                "critical_chance": 0,
+                "score": 0
+            }
+        }
+    },
+    "achievements": []
+}

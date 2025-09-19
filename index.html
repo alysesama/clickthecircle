@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Objects</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components/menu.css">
+    <link rel="stylesheet" href="css/components/upgrade.css">
+</head>
+<body>
+    <div class="score-ui">
+        <div id="score">00000000</div>
+        <div class="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+        <div id="level">Level 1</div>
+        <div id="cps-counter">0.00 clicks/s</div>
+        <div id="sps-counter">0.00 pts/s</div>
+    </div>
+
+    <div class="menu-button">
+        <img src="res/img/menu.svg" alt="Menu">
+    </div>
+
+    <div class="upgrade-button">
+        <img src="res/img/upgrade.svg" alt="Upgrade">
+    </div>
+
+    <button class="auto-button">
+        <div class="auto-button-overlay-container">
+            <div class="auto-button-overlay duration"></div>
+            <div class="auto-button-overlay refill"></div>
+        </div>
+        <img src="res/img/auto.svg" alt="Auto">
+    </button>
+
+    <div id="menu-placeholder"></div>
+    <div id="upgrade-placeholder"></div>
+
+    <script src="js/components/saveManager.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/components/menu.js"></script>
+    <script src="js/components/upgrade.js"></script>
+    <script src="js/components/loader.js"></script>
+</body>
+</html>
