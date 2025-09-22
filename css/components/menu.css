@@ -7,12 +7,46 @@
     pointer-events: auto; /* Make sure the button is clickable */
     background-color: white;
     border-radius: 50%;
-    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     transition: background-color 0.2s;
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+}
+
+/* Desktop sizes */
+@media (min-width: 1024px) {
+    .menu-button {
+        padding: 20px;
+    }
+    .menu-button img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Tablet sizes */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .menu-button {
+        padding: 18px;
+    }
+    .menu-button img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Mobile sizes */
+@media (max-width: 767px) {
+    .menu-button {
+        padding: 15px;
+        top: 3%;
+    }
+    .menu-button img {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .menu-button:hover {
@@ -51,15 +85,49 @@
 
 .menu-tab {
     position: relative;
-    width: 30%;
-    height: 70%;
     background-color: #222;
     border-radius: 15px;
-    padding: 25px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.4);
     color: white;
     transform: scale(0.95);
     transition: transform 0.3s ease;
+}
+
+/* Desktop sizes */
+@media (min-width: 1024px) {
+    .menu-tab {
+        width: 30%;
+        height: 70%;
+        padding: 25px;
+    }
+    .close-button {
+        right: -60px;
+    }
+}
+
+/* Tablet sizes */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .menu-tab {
+        width: 50%;
+        height: 80%;
+        padding: 20px;
+    }
+    .close-button {
+        right: -50px;
+    }
+}
+
+/* Mobile sizes */
+@media (max-width: 767px) {
+    .menu-tab {
+        width: 90%;
+        height: 90%;
+        padding: 15px;
+    }
+    .close-button {
+        top: -50px;
+        right: 10px;
+    }
 }
 
 .menu-tab-overlay.visible .menu-tab {

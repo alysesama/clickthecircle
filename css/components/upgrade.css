@@ -7,12 +7,46 @@
     pointer-events: auto;
     background-color: white;
     border-radius: 50%;
-    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     transition: background-color 0.2s;
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+}
+
+/* Desktop sizes */
+@media (min-width: 1024px) {
+    .upgrade-button {
+        padding: 20px;
+    }
+    .upgrade-button img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Tablet sizes */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .upgrade-button {
+        padding: 18px;
+    }
+    .upgrade-button img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Mobile sizes */
+@media (max-width: 767px) {
+    .upgrade-button {
+        padding: 15px;
+        bottom: 3%;
+    }
+    .upgrade-button img {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .upgrade-button:hover {
@@ -51,15 +85,67 @@
 
 .upgrade-tab {
     position: relative;
-    width: 30%;
-    height: 70%;
     background-color: #222;
     border-radius: 15px;
-    padding: 25px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.4);
     color: white;
     transform: scale(0.95);
     transition: transform 0.3s ease;
+}
+
+/* Desktop sizes */
+@media (min-width: 1024px) {
+    .upgrade-tab {
+        width: 30%;
+        height: 70%;
+        padding: 25px;
+    }
+    .close-button {
+        right: -60px;
+    }
+    .upgrade-icon {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Tablet sizes */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .upgrade-tab {
+        width: 50%;
+        height: 80%;
+        padding: 20px;
+    }
+    .close-button {
+        right: -50px;
+    }
+    .upgrade-icon {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Mobile sizes */
+@media (max-width: 767px) {
+    .upgrade-tab {
+        width: 90%;
+        height: 90%;
+        padding: 15px;
+    }
+    .close-button {
+        top: -50px;
+        right: 10px;
+    }
+    .upgrade-icon {
+        width: 60px;
+        height: 60px;
+    }
+    .upgrade-item {
+        padding: 10px;
+    }
+    .detail-label {
+        font-size: 1em;
+    }
 }
 
 .upgrade-tab-overlay.visible .upgrade-tab {
@@ -249,7 +335,9 @@
 }
 
 .upgrade-btn {
-    padding: 8px 16px;
+    padding: 8px 0;
+    width: 100px;
+    text-align: center;
     border: none;
     border-radius: 8px;
     background-color: #f1c40f;

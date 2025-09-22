@@ -22,7 +22,7 @@
         "highestSingleAutoScore": 0
     },
     "upgradeLevel": {
-        "auto_click": {
+        "botclicker": {
             "clickspeed": 0,
             "duration": 0,
             "refilltime": 0

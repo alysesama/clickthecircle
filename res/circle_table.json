@@ -445,26 +445,26 @@
             ]
         }
     },
-    "auto_click_table": {
+    "botclicker_table": {
         "clickspeed": [
             {
-                "value": 0.1,
+                "value": 0.2,
                 "cost": 1024
             },
             {
-                "value": 0.075,
+                "value": 0.166,
                 "cost": 8192
             },
             {
-                "value": 0.05,
+                "value": 0.133,
                 "cost": 25600
             },
             {
-                "value": 0.025,
+                "value": 0.1,
                 "cost": 102400
             },
             {
-                "value": 0.01,
+                "value": 0.066,
                 "cost": 409600
             }
         ],
@@ -474,7 +474,7 @@
                 "cost": 1024
             },
             {
-                "value": 0.30,
+                "value": 30,
                 "cost": 8192
             },
             {
@@ -486,29 +486,29 @@
                 "cost": 102400
             },
             {
-                "value": 0.60,
+                "value": 60,
                 "cost": 409600
             }
         ],
         "refilltime": [
             {
-                "value": 420,
+                "value": 150,
                 "cost": 1024
             },
             {
-                "value": 330,
+                "value": 120,
                 "cost": 8192
             },
             {
-                "value": 240,
+                "value": 90,
                 "cost": 25600
             },
             {
-                "value": 150,
+                "value": 60,
                 "cost": 102400
             },
             {
-                "value": 0.60,
+                "value": 30,
                 "cost": 409600
             }
         ]

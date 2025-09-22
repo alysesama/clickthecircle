@@ -199,8 +199,8 @@ function initializeSettingButtons() {
         soundImg.src = isSoundOn ? 'res/img/menu_sound_on.svg' : 'res/img/menu_sound_off.svg';
     }
 
-    // Set initial state when components are loaded
-    document.addEventListener('componentsLoaded', updateSoundIcon, { once: true });
+    // Set initial sound icon state immediately
+    updateSoundIcon();
     
     // Sound button click listener
     soundBtn.addEventListener('click', () => {
@@ -211,11 +211,13 @@ function initializeSettingButtons() {
     });
 
     // Reset button click listener
-    resetBtn.addEventListener('click', () => {
+    resetBtn.addEventListener('click', async () => {
         const isConfirmed = confirm('Are you sure you want to reset all your progress? This action cannot be undone.');
         if (isConfirmed) {
-            // Use localStorage.clear() to ensure everything is wiped before reload.
             localStorage.clear();
+            // Load fresh template and save it
+            await SaveManager.load();
+            SaveManager.save();
             location.reload();
         }
     });
